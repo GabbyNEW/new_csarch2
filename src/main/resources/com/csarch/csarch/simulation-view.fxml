@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="789.0" maxWidth="824.0" minHeight="400" minWidth="430" prefHeight="789.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csarch.csarch.SimulationController">
+   <children>
+      <Text fx:id="m_text" layoutX="140.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M : 1111111111111111 (65535)">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="q_text" layoutX="398.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q : 1111111111111111 (65535)">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="44.0" layoutY="55.0" prefHeight="530.0" prefWidth="710.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A1" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q1" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_1" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxWidth="-Infinity" prefHeight="45.0" prefWidth="355.0" GridPane.rowIndex="1">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A2" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q2" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_2" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A3" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q3" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_3" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A4" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q4" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_4" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A5" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q5" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_5" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A6" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q6" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_6" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A7" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q7" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_7" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A8" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q8" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_8" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Text layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A9" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q9" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_9" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A10" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q10" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_10" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" /><Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A11" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q11" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_11" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A12" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q12" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_12" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A13" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q13" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_13" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A14" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q14" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_14" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A15" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q15" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_15" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <children>
+                  <Text layoutX="6.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="A16" alignment="CENTER" disable="true" layoutX="34.0" layoutY="20.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q16" alignment="CENTER" disable="true" layoutX="166.0" layoutY="19.0" prefHeight="26.0" prefWidth="121.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="Q_1_16" alignment="CENTER" disable="true" layoutX="300.0" layoutY="19.0" prefHeight="27.0" prefWidth="30.0" style="-fx-border-color: #000000;" />
+                  <Text layoutX="91.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="222.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q" textAlignment="CENTER">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q-1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <Button fx:id="simulate_step_by_step_button" layoutX="253.0" layoutY="597.0" mnemonicParsing="false" onAction="#simulate_step" prefHeight="34.0" prefWidth="137.0" text="Simulate Step By Step" />
+      <Button fx:id="simulate_all_button" layoutX="408.0" layoutY="597.0" mnemonicParsing="false" onAction="#simulate_all" prefHeight="34.0" prefWidth="137.0" text="Simulate All" />
+      <TextField fx:id="binary_output" alignment="CENTER" disable="true" layoutX="131.0" layoutY="666.0" prefHeight="42.0" prefWidth="254.0" style="-fx-border-color: #000000;" text="0000000000000000000000000000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="decimal_output" alignment="CENTER" disable="true" layoutX="410.0" layoutY="666.0" prefHeight="42.0" prefWidth="254.0" style="-fx-border-color: #000000;" text="0000000000000000000000000000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="222.0" layoutY="656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Binary Output">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="494.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decimal Output">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="output_result_in_text_file_button" layoutX="14.0" layoutY="730.0" mnemonicParsing="false" onAction="#writeOutputToFile" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #9159c2;" text="Output Result in Text File" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit_button_simulation" layoutX="678.0" layoutY="738.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="105.0" style="-fx-background-color: #eb5757;" text="Exit" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

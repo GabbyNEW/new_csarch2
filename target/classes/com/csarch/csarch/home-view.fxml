@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.text.Text?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csarch.csarch.HelloController">
+   <children>
+      <TextField layoutX="93.0" fx:id="multiplicand_input" layoutY="93.0" prefHeight="26.0" prefWidth="243.0" promptText="Input Decimal Multiplicand Here..." />
+      <TextField layoutX="93.0" fx:id="multiplier_input" layoutY="147.0" prefHeight="26.0" prefWidth="243.0" promptText="Input Decimal Multiplier Here..." />
+      <RadioButton layoutX="127.0" fx:id="decimal_radio_button" layoutY="200.0" mnemonicParsing="false" selected="true" text="Decimal" />
+      <RadioButton layoutX="238.0" fx:id="binary_radio_button" layoutY="200.0" mnemonicParsing="false" text="Binary" />
+      <Button layoutX="149.0" layoutY="243.0" fx:id="simulate_button" mnemonicParsing="false" prefHeight="40.0" prefWidth="132.0" text="Simulate" textOverrun="CLIP" onAction="#onSimulate">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="351.0" layoutY="361.0" fx:id="exit_button_home" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #eb5757;" text="Exit">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+
+      <Text layoutX="104.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #fa2323;" text="">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="104.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #fa2323;" text="">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+
+   </children>
+</AnchorPane>
