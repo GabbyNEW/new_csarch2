@@ -140,8 +140,11 @@ public class SimulationController {
             m = Utility.decimalToBinary(DataClass.multiplicand);
             q = Utility.decimalToBinary(DataClass.multiplier);
 
-            m = Utility.checkNumBitsMShort(m, q);
-            q = Utility.checkNumBitsQShort(m, q);
+            m = Utility.checkNumBitsMShort(m, q, Integer.parseInt(DataClass.multiplicand));
+            q = Utility.checkNumBitsQShort(m, q, Integer.parseInt(DataClass.multiplier));
+
+            System.out.println(m);
+            System.out.println(q);
         }
         else {
             m = DataClass.multiplicand;

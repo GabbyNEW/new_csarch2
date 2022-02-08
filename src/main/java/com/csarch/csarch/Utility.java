@@ -184,22 +184,23 @@ public class Utility
         return str.toString();
     }
 
-    public static String checkNumBitsQShort(String m, String q) {
+    public static String checkNumBitsQShort(String m, String q, int num) {
 
         StringBuilder sb;
+        int ins = 0;
 
-        if(m.length() > q.length()) {
+        if (num < 0)
+            ins = 1;
+
+        if (m.length() > q.length()) {
 
             sb = new StringBuilder(q);
 
             // concat MSb number of times
-            while(sb.length() < m.length()) {
+            while (sb.length() < m.length()) {
 
                 // insert based on negative or not
-                if(Integer.parseInt(q) >= 0)
-                    sb.insert(0, 0);
-                else
-                    sb.insert(0, 1);
+                sb.insert(0, ins);
             }
 
             q = new String(sb.toString());
@@ -208,9 +209,13 @@ public class Utility
         return q;
     }
 
-    public static String checkNumBitsMShort(String m, String q) {
+    public static String checkNumBitsMShort(String m, String q, int num) {
 
         StringBuilder sb;
+        int ins = 0;
+
+        if (num < 0)
+            ins = 1;
 
         if(q.length() > m.length()) {
 
@@ -220,10 +225,7 @@ public class Utility
             while(sb.length() < q.length()) {
 
                 // insert based on negative or not
-                if(Integer.parseInt(m) >= 0)
-                    sb.insert(0, 0);
-                else
-                    sb.insert(0, 1);
+                sb.insert(0, ins);
             }
 
             m = new String(sb.toString());
