@@ -143,8 +143,8 @@ public class SimulationController {
             m = Utility.checkNumBitsMShort(m, q, Integer.parseInt(DataClass.multiplicand));
             q = Utility.checkNumBitsQShort(m, q, Integer.parseInt(DataClass.multiplier));
 
-            System.out.println(m);
-            System.out.println(q);
+            //System.out.println(m);
+            //System.out.println(q);
         }
         else {
             m = DataClass.multiplicand;
@@ -152,8 +152,6 @@ public class SimulationController {
 
         }
 
-        // TODO: fix negative values
-        // TODO: fix uneven bits
         m_negative = Utility.findTwoscomplement(String.valueOf(m));
         numOfDigits = m.length(); // Determine number of digits on M to initialize A
         DataClass.numberOfDigits = numOfDigits;
@@ -189,7 +187,18 @@ public class SimulationController {
             output_result_in_text_file_button.setDisable(false);
             String binaryOutput = a + q;
             binary_output.setText(binaryOutput);
-            decimal_output.setText(String.valueOf(Integer.parseInt(binaryOutput, 2)));
+
+            // Check for sign cases
+            if((Integer.parseInt(DataClass.multiplicand) > 0 && Integer.parseInt(DataClass.multiplier) < 0) ||
+                    (Integer.parseInt(DataClass.multiplicand) < 0 && Integer.parseInt(DataClass.multiplier) > 0)) {
+                // do two's complement (not the output but internally then convert to int)
+                binaryOutput = Utility.findTwoscomplement(binaryOutput);
+                int out = Integer.parseInt(binaryOutput, 2);
+                out *= -1;
+                decimal_output.setText(String.valueOf(out));
+            } else {
+                decimal_output.setText(String.valueOf(Integer.parseInt(binaryOutput, 2)));
+            }
 
             this.output = "Binary Output: " + binary_output.getText() + " | Decimal Output: " + decimal_output.getText();
         }

@@ -69,8 +69,21 @@ public class Utility
     }
 
     public static String binaryArithmeticSubtract(String a, String m_negative) {
+
+        StringBuilder sb;
+
         int answer = Integer.parseInt(a, 2) + Integer.parseInt(m_negative, 2);
         String binaryAnswer = Integer.toBinaryString(answer);
+
+        if(binaryAnswer.length() > a.length())
+            binaryAnswer = binaryAnswer.substring(1);
+
+        // missing a 0
+        if(binaryAnswer.length() < a.length()) {
+            sb = new StringBuilder(binaryAnswer);
+            sb.insert(0, 0);
+            binaryAnswer = new String(sb.toString());
+        }
 
         return binaryAnswer;
     }
