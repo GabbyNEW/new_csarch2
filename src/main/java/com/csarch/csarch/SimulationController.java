@@ -1,11 +1,13 @@
 package com.csarch.csarch;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -201,5 +203,12 @@ public class SimulationController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    // close application
+    @FXML
+    public void closeApplication(ActionEvent event) {
+        Stage stage = (Stage) exit_button_simulation.getScene().getWindow();
+        stage.close();
     }
 }

@@ -1,9 +1,11 @@
 package com.csarch.csarch;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -17,6 +19,7 @@ public class HelloController {
     public TextField multiplier_input;
     public RadioButton decimal_radio_button;
     public RadioButton binary_radio_button;
+    public Button exit_button_home;
 
     @FXML
     private void initialize() {
@@ -41,8 +44,9 @@ public class HelloController {
     }
 
     // TODO: Map this to the Exit button, end application
-    public void exit() {
-        Platform.exit();
+    @FXML
+    public void closeApplication(ActionEvent event) {
+        Stage stage = (Stage) exit_button_home.getScene().getWindow();
+        stage.close();
     }
-
 }
