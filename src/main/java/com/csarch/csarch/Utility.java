@@ -103,9 +103,20 @@ public class Utility
         if (num_int < 0) // negative
             return Integer.toBinaryString(num_int).substring(0, 17);
 
+
         String binaryString = Integer.toBinaryString(num_int);
-        if (binaryString.length() < 4)
-            binaryString = String.format("%04d", Integer.parseInt(binaryString));
+
+        // Comment out
+        /*if (binaryString.length() < 4)
+            binaryString = String.format("%04d", Integer.parseInt(binaryString));*/
+
+        StringBuilder sb = new StringBuilder(binaryString);
+
+        if(num_int >= 0) {
+            sb.insert(0, "0");
+            binaryString = new String(sb.toString());
+
+        }
 
         return binaryString;
     }
@@ -159,5 +170,53 @@ public class Utility
 
         // return the modified string
         return str.toString();
+    }
+
+    public static String checkNumBitsQShort(String m, String q) {
+
+        StringBuilder sb;
+
+        if(m.length() > q.length()) {
+
+            sb = new StringBuilder(q);
+
+            // concat MSb number of times
+            while(sb.length() < m.length()) {
+
+                // insert based on negative or not
+                if(Integer.parseInt(q) >= 0)
+                    sb.insert(0, 0);
+                else
+                    sb.insert(0, 1);
+            }
+
+            q = new String(sb.toString());
+        }
+
+        return q;
+    }
+
+    public static String checkNumBitsMShort(String m, String q) {
+
+        StringBuilder sb;
+
+        if(q.length() > m.length()) {
+
+            sb = new StringBuilder(m);
+
+            // concat MSb number of times
+            while(sb.length() < q.length()) {
+
+                // insert based on negative or not
+                if(Integer.parseInt(m) >= 0)
+                    sb.insert(0, 0);
+                else
+                    sb.insert(0, 1);
+            }
+
+            m = new String(sb.toString());
+        }
+
+        return m;
     }
 }

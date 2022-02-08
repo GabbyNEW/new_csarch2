@@ -139,12 +139,18 @@ public class SimulationController {
         if (DataClass.isDecimalSelected) {
             m = Utility.decimalToBinary(DataClass.multiplicand);
             q = Utility.decimalToBinary(DataClass.multiplier);
+
+            m = Utility.checkNumBitsMShort(m, q);
+            q = Utility.checkNumBitsQShort(m, q);
         }
         else {
             m = DataClass.multiplicand;
             q = DataClass.multiplier;
 
         }
+
+        // TODO: fix negative values
+        // TODO: fix uneven bits
         m_negative = Utility.findTwoscomplement(String.valueOf(m));
         numOfDigits = m.length(); // Determine number of digits on M to initialize A
         DataClass.numberOfDigits = numOfDigits;
@@ -152,7 +158,9 @@ public class SimulationController {
         for (int i = 0; i < numOfDigits; i++) {
             temp_a = temp_a.concat("0");
         }
+
         a = temp_a;
+
         q_negative = 0;
     }
 
