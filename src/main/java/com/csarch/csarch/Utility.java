@@ -100,12 +100,25 @@ public class Utility
     public static String decimalToBinary(String num)
     {
         int num_int = Integer.parseInt(num);
+        // If negative
         if (num_int < 0) // negative
-            return Integer.toBinaryString(num_int).substring(0, 17);
+        {
+            // Turn to positive
+            num_int = num_int*-1;
+            String binaryString = Integer.toBinaryString(num_int);
+
+            binaryString = findTwoscomplement(binaryString);
+            binaryString = "1" + binaryString;
+
+            System.out.println(binaryString);
+            return binaryString;
+        }
 
         String binaryString = Integer.toBinaryString(num_int);
         if (binaryString.length() < 4)
             binaryString = String.format("%04d", Integer.parseInt(binaryString));
+
+        System.out.println(binaryString);
 
         return binaryString;
     }
@@ -160,4 +173,6 @@ public class Utility
         // return the modified string
         return str.toString();
     }
+
+
 }
