@@ -140,6 +140,7 @@ public class SimulationController {
             m = Utility.decimalToBinary(DataClass.multiplicand);
             q = Utility.decimalToBinary(DataClass.multiplier);
 
+
             m = Utility.checkNumBitsMShort(m, q, Integer.parseInt(DataClass.multiplicand));
             q = Utility.checkNumBitsQShort(m, q, Integer.parseInt(DataClass.multiplier));
 
@@ -148,6 +149,8 @@ public class SimulationController {
             m = DataClass.multiplicand;
             q = DataClass.multiplier;
 
+            m = "0" + m;
+            q = "0" + q;
         }
 
         m_negative = Utility.findTwoscomplement(String.valueOf(m));
