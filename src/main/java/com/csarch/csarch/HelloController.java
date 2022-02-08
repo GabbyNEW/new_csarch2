@@ -43,7 +43,6 @@ public class HelloController {
         stage.show();
     }
 
-    // TODO: Map this to the Exit button, end application
     @FXML
     public void closeApplication(ActionEvent event) {
         Stage stage = (Stage) exit_button_home.getScene().getWindow();

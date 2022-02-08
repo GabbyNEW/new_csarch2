@@ -65,7 +65,14 @@ public class Utility
         int answer = Integer.parseInt(a, 2) + Integer.parseInt(m, 2);
         String binaryAnswer = Integer.toBinaryString(answer);
         int n = DataClass.numberOfDigits;
-        return binaryAnswer.substring(binaryAnswer.length() - n);
+
+        if(binaryAnswer.length() > a.length())
+            binaryAnswer = binaryAnswer.substring(1);
+        else if(binaryAnswer.length() < a.length())
+            binaryAnswer = additionalMSb(a.length(), binaryAnswer);
+
+        return binaryAnswer;
+        //return binaryAnswer.substring(binaryAnswer.length() - n);
     }
 
     public static String binaryArithmeticSubtract(String a, String m_negative) {
@@ -79,7 +86,7 @@ public class Utility
             binaryAnswer = binaryAnswer.substring(1);
 
         // missing a 0
-        if(binaryAnswer.length() < a.length()) {
+        while(binaryAnswer.length() < a.length()) {
             sb = new StringBuilder(binaryAnswer);
             sb.insert(0, 0);
             binaryAnswer = new String(sb.toString());
@@ -247,18 +254,15 @@ public class Utility
         return m;
     }
 
-    public static String removeAdditionalOne(String negative) {
+    public static String additionalMSb(int numDigits, String string) {
 
-        char x, y;
-        y = '\0';
+        StringBuilder sb = new StringBuilder(string);
+        char x = string.charAt(0);
 
-        for(int i = 0; i < negative.length(); i++) {
-
-            x = negative.charAt(i + 1);
-
+        for(int i = string.length(); i < numDigits; i++) {
+            sb.insert(0, x);
         }
 
-        return "";
+        return sb.toString();
     }
-
 }

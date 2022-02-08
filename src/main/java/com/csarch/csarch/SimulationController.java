@@ -143,8 +143,6 @@ public class SimulationController {
             m = Utility.checkNumBitsMShort(m, q, Integer.parseInt(DataClass.multiplicand));
             q = Utility.checkNumBitsQShort(m, q, Integer.parseInt(DataClass.multiplier));
 
-            //System.out.println(m);
-            //System.out.println(q);
         }
         else {
             m = DataClass.multiplicand;
@@ -153,7 +151,15 @@ public class SimulationController {
         }
 
         m_negative = Utility.findTwoscomplement(String.valueOf(m));
-        numOfDigits = m.length(); // Determine number of digits on M to initialize A
+
+        if(m.length() > q.length())
+            numOfDigits = m.length(); // Determine number of digits on M to initialize A
+        else
+            numOfDigits = q.length();
+
+        m = Utility.additionalMSb(numOfDigits, m);
+        q = Utility.additionalMSb(numOfDigits, q);
+
         DataClass.numberOfDigits = numOfDigits;
         String temp_a = "";
         for (int i = 0; i < numOfDigits; i++) {
