@@ -99,23 +99,35 @@ public class Utility
     // k-precision after decimal point
     public static String decimalToBinary(String num)
     {
+
         int num_int = Integer.parseInt(num);
-        if (num_int < 0) // negative
-            return Integer.toBinaryString(num_int).substring(0, 17);
-
-
         String binaryString = Integer.toBinaryString(num_int);
+        StringBuilder sb;
 
-        // Comment out
-        /*if (binaryString.length() < 4)
-            binaryString = String.format("%04d", Integer.parseInt(binaryString));*/
+        // Negative
+        if (num_int < 0) {
 
-        StringBuilder sb = new StringBuilder(binaryString);
+            // Convert to Positive first
+            num_int = Math.abs(num_int);
+
+            // To binary
+            binaryString = Integer.toBinaryString(num_int);
+
+            // Two's Complement
+            binaryString = findTwoscomplement(binaryString);
+
+            sb = new StringBuilder(binaryString);
+            sb.insert(0, "1");
+            binaryString = new String(sb.toString());
+
+            return binaryString;
+        }
+
+        sb = new StringBuilder(binaryString);
 
         if(num_int >= 0) {
             sb.insert(0, "0");
             binaryString = new String(sb.toString());
-
         }
 
         return binaryString;
@@ -219,4 +231,19 @@ public class Utility
 
         return m;
     }
+
+    public static String removeAdditionalOne(String negative) {
+
+        char x, y;
+        y = '\0';
+
+        for(int i = 0; i < negative.length(); i++) {
+
+            x = negative.charAt(i + 1);
+
+        }
+
+        return "";
+    }
+
 }
